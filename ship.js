@@ -4,8 +4,8 @@
   }
 
   var Ship = Asteroids.Ship = function (pos, game) {
-    this.RADIUS = 7;
-    this.COLOR = "green";
+    this.RADIUS = 13;
+    this.COLOR = "white";
     this.vel = [0, 0];
     this.pos = pos;
     this.game = game;    

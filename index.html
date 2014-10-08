@@ -1,5 +1,6 @@
 <html>
   <head>
+    <link rel="stylesheet" type="text/css" href="./style.css">
     <script type="text/javascript" src="keymaster.js"></script>
     <script type="text/javascript" src="movingObject.js"></script>
     <script type="text/javascript" src="utils.js"></script>
@@ -12,8 +13,22 @@
   </head>
   
   <body>
-    <canvas id="game-canvas" width="800" height="800"></canvas>
-    
+    <section>
+      <h1>Asteroids</h1>
+      <p>A Canvas / Javascript / jQuery app by Max Pleaner</p>
+      <em><a href="http://github.com/maxpleaner">http://github.com/maxpleaner</a></em>
+      <br><em>This site's code base is located at 
+        <a href="http://github.com/maxpleaner/asteroids">http://github.com/maxpleaner/asteroids</a>
+      </em>
+      <h3>Instructions</h3>
+      <li>WASD to move around</li>
+      <li>`b` to fire bullets</li>
+      <li>asteroids are destroyed on impact with one another</li>
+      <li>a new asteroid is generated every 2 seconds</li>
+      <li>You will continue to respawn indefinitely</li>
+    </section>
+    <canvas id="game-canvas" width="600" height="600"></canvas>
+
     <script> 
       var canvas = document.getElementById("game-canvas");
       var ctx = canvas.getContext('2d');

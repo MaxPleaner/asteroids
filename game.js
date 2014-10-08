@@ -7,7 +7,7 @@
     this.canvasEl = document.getElementsByTagName("canvas")[0];
     this.DIM_X = parseInt(this.canvasEl.attributes["width"].value);
     this.DIM_Y = parseInt(this.canvasEl.attributes["height"].value);
-    this.NUM_ASTEROIDS = 5;
+    this.NUM_ASTEROIDS = 15;
     this.astrArray = [];
     this.bulletArray = [];
     this.ship = new Asteroids.Ship(this.randomPosition(this.canvasEl), this);
@@ -29,10 +29,18 @@
   Game.prototype.addAsteroids = function () {
     var ctx = this.canvasEl.getContext('2d');
     for (var i = 0; i < this.NUM_ASTEROIDS; i++) {
-      var newAsteroid = new Asteroids.Asteroid(this.randomPosition(this.canvasEl), this);
-      this.astrArray.push(newAsteroid);
+      this.putAsteroidOnBoard();
     }
+    window.setInterval(function(){
+      this.putAsteroidOnBoard();
+    }.bind(this), 1000)
+
   };
+
+  Game.prototype.putAsteroidOnBoard = function () {
+    var newAsteroid = new Asteroids.Asteroid(this.randomPosition(this.canvasEl), this);
+      this.astrArray.push(newAsteroid);
+  }
   
   Game.prototype.randomPosition = function (canvasEl) {
     var WIDTH = this.DIM_X;
