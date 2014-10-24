@@ -7,19 +7,20 @@
     <script type="text/javascript" src="asteroid.js"></script>
     <script type="text/javascript" src="game.js"></script>
     <script type="text/javascript" src="gameView.js"></script>
-    <script type="text/javascript" src="ship.js"></script>    
-    <script type="text/javascript" src="bullet.js"></script>    
+    <script type="text/javascript" src="ship.js"></script>
+    <script type="text/javascript" src="bullet.js"></script>
     <style>canvas { border: 1px solid black;}</style>
   </head>
-  
+
   <body>
     <section>
       <h1>Asteroids</h1>
       <p>A Canvas / Javascript / jQuery app by Max Pleaner</p>
       <em><a href="http://github.com/maxpleaner">http://github.com/maxpleaner</a></em>
-      <br><em>This site's code base is located at 
+      <br><em>This site's code base is located at
         <a href="http://github.com/maxpleaner/asteroids">http://github.com/maxpleaner/asteroids</a>
-      </em>
+      </em> <br>
+      I've also made <a href="http://maxpleaner.github.io/snake">Snake</a>.
       <h3>Instructions</h3>
       <li>WASD to move around</li>
       <li>`b` to fire bullets</li>
@@ -29,13 +30,13 @@
     </section>
     <canvas id="game-canvas" width="600" height="600"></canvas>
 
-    <script> 
+    <script>
       var canvas = document.getElementById("game-canvas");
       var ctx = canvas.getContext('2d');
       var game = new Asteroids.Game();
       var gameView = new Asteroids.GameView(game, ctx);
       gameView.start();
-    </script> 
+    </script>
   </body>
-  
+
 </html>
